@@ -1,212 +1,129 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>PC Rádio FM - Música, Informação e Muito Mais!</title><style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
-    min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #050505;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
+    <title>PC Rádio FM</title>
 
-.radio-page {
-    width: 100%;
-    max-width: 480px;
-    min-height: 700px;
-    background:
-        radial-gradient(circle at 50% 20%, #222 0%, #090909 45%, #000 100%);
-    border: 2px solid #f5b900;
-    border-radius: 22px;
-    overflow: hidden;
-    box-shadow:
-        0 0 25px rgba(245,185,0,.25),
-        0 0 60px rgba(245,185,0,.10);
-    text-align: center;
-    padding-bottom: 30px;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-.top {
-    padding: 28px 15px 10px;
-}
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #111111, #252525);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-.onair {
-    display: inline-block;
-    border: 2px solid #ffcc00;
-    color: #ffcc00;
-    padding: 7px 18px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 15px;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 12px rgba(255,204,0,.25);
-}
+        .radio-box {
+            width: 100%;
+            max-width: 600px;
+            background: #181818;
+            border-radius: 22px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
 
-.logo-area {
-    position: relative;
-    margin: auto;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 5px solid #f5b900;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background:
-        radial-gradient(circle, #303030 0%, #111 55%, #050505 100%);
-    box-shadow:
-        inset 0 0 25px #000,
-        0 0 20px rgba(245,185,0,.35);
-}
+        .logo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
 
-.equalizer {
-    display: flex;
-    align-items: end;
-    gap: 5px;
-    height: 48px;
-    margin-bottom: 5px;
-}
+        h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
 
-.equalizer span {
-    width: 9px;
-    background: #ffb900;
-    border-radius: 2px;
-    box-shadow: 0 0 8px rgba(255,185,0,.5);
-}
+        .subtitle {
+            color: #cccccc;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
 
-.equalizer span:nth-child(1) { height: 18px; }
-.equalizer span:nth-child(2) { height: 30px; }
-.equalizer span:nth-child(3) { height: 40px; }
-.equalizer span:nth-child(4) { height: 25px; }
-.equalizer span:nth-child(5) { height: 48px; }
-.equalizer span:nth-child(6) { height: 34px; }
-.equalizer span:nth-child(7) { height: 23px; }
+        .player {
+            width: 100%;
+            min-height: 100px;
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.pc {
-    font-size: 82px;
-    line-height: 70px;
-    font-weight: 900;
-    letter-spacing: -8px;
-    color: white;
-    text-shadow: 3px 3px 0 #777;
-}
+        .status {
+            margin-top: 25px;
+            color: #bbbbbb;
+            font-size: 14px;
+        }
 
-.radio-name {
-    font-size: 34px;
-    font-weight: 900;
-    margin-top: 12px;
-}
+        .footer {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #888888;
+        }
+    </style>
+</head>
 
-.radio-name span {
-    color: #ffc400;
-    font-style: italic;
-}
+<body>
 
-.slogan {
-    margin: 25px 25px 8px;
-    font-size: 25px;
-    line-height: 1.2;
-    font-style: italic;
-    font-weight: bold;
-}
+    <main class="radio-box">
 
-.sub {
-    color: #ffc400;
-    font-weight: bold;
-    margin-top: 8px;
-    font-size: 14px;
-    letter-spacing: 1px;
-}
+        <!--
+        Se você já tiver uma imagem da logo no GitHub,
+        depois podemos colocar o nome correto do arquivo aqui.
+        Por enquanto a página funciona mesmo sem ela.
+        -->
 
-.features {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin: 28px 20px;
-}
+        <h1>PC Rádio FM</h1>
 
-.feature {
-    border-top: 1px solid #ffc400;
-    border-bottom: 1px solid #ffc400;
-    padding: 12px 5px;
-    font-size: 12px;
-    font-weight: bold;
-}
+        <p class="subtitle">
+            Música, informação e muito mais!
+        </p>
 
-.feature .icon {
-    display: block;
-    font-size: 24px;
-    margin-bottom: 5px;
-}
+        <div class="player">
 
-.player-box {
-    margin: 15px 20px;
-    padding: 20px 15px;
-    border-radius: 18px;
-    background: #111;
-    border: 1px solid #555;
-}
+            <div
+                data-type="newStreamPlayer"
+                data-publicToken="e9c78308-9d30-4c94-8bd6-185e3fa14f1f"
+                data-theme="light"
+                data-color="e81e4d"
+                data-channelId="a2cda98a-3830-4240-8a16-a474017567bd"
+                data-rendered="false"
+                class="cstrEmbed">
 
-.player-title {
-    color: #ffc400;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
+                <a href="https://www.caster.fm">Shoutcast Hosting</a>
+                <a href="https://www.caster.fm">Stream Hosting</a>
+                <a href="https://www.caster.fm">Radio Server Hosting</a>
 
-.play-button {
-    width: 105px;
-    height: 105px;
-    border-radius: 50%;
-    border: 4px solid #ffc400;
-    background: #050505;
-    color: #ffc400;
-    font-size: 42px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px;
-    box-shadow: 0 0 20px rgba(255,196,0,.25);
-    transition: .2s;
-}
+            </div>
 
-.play-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(255,196,0,.45);
-}
+        </div>
 
-.status {
-    color: #aaa;
-    font-size: 13px;
-    margin-top: 8px;
-}
+        <div class="status">
+            🔴 PC Rádio FM — ao vivo
+        </div>
 
-.volume-area {
-    margin-top: 15px;
-}
+        <div class="footer">
+            Obrigado por ouvir a PC Rádio FM ❤️
+        </div>
 
-.volume-area input {
-    width: 80%;
-    accent-color: #ffc400;
-}
+    </main>
 
-.footer {
-    margin-top: 20px;
-    color: #777;
-    font-size: 12px;
-}
+    <script src="//cdn.cloud.caster.fm//widgets/embed.js"></script>
 
-@media (max-width: 400px) {
-    .logo-area {
+</body>
+</html>

@@ -1,129 +1,190 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PC Rádio FM</title>
+<title>PC Rádio FM - Música, Informação e Muito Mais!</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            min-height: 100vh;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #111111, #252525);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #080808, #250713, #080808);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
 
-        .radio-box {
-            width: 100%;
-            max-width: 600px;
-            background: #181818;
-            border-radius: 22px;
-            padding: 35px 25px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-        }
+.radio-box {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(20, 20, 20, 0.97);
+    border: 1px solid #e81e4d;
+    border-radius: 25px;
+    padding: 35px 22px 28px;
+    text-align: center;
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.65);
+}
 
-        .logo {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
+.live {
+    display: inline-block;
+    background: #e81e4d;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 30px;
+    margin-bottom: 18px;
+}
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 8px;
-        }
+h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
 
-        .subtitle {
-            color: #cccccc;
-            font-size: 16px;
-            margin-bottom: 30px;
-        }
+h1 span {
+    color: #e81e4d;
+}
 
-        .player {
-            width: 100%;
-            min-height: 100px;
-            background: white;
-            border-radius: 15px;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+.subtitle {
+    color: #d0d0d0;
+    font-size: 17px;
+    margin-bottom: 28px;
+}
 
-        .status {
-            margin-top: 25px;
-            color: #bbbbbb;
-            font-size: 14px;
-        }
+.player-box {
+    background: white;
+    border-radius: 18px;
+    padding: 18px;
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .footer {
-            margin-top: 25px;
-            font-size: 13px;
-            color: #888888;
-        }
-    </style>
+.cstrEmbed {
+    width: 100%;
+}
+
+.now-playing {
+    margin-top: 24px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.now-playing span {
+    color: #e81e4d;
+}
+
+.description {
+    margin-top: 10px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.line {
+    width: 70px;
+    height: 3px;
+    background: #e81e4d;
+    margin: 25px auto 18px;
+    border-radius: 5px;
+}
+
+.footer {
+    color: #888;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .radio-box {
+        padding: 28px 14px 22px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .player-box {
+        padding: 12px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <main class="radio-box">
+<main class="radio-box">
 
-        <!--
-        Se você já tiver uma imagem da logo no GitHub,
-        depois podemos colocar o nome correto do arquivo aqui.
-        Por enquanto a página funciona mesmo sem ela.
-        -->
+    <div class="live">
+        🔴 AO VIVO
+    </div>
 
-        <h1>PC Rádio FM</h1>
+    <h1>
+        PC Rádio <span>FM</span>
+    </h1>
 
-        <p class="subtitle">
-            Música, informação e muito mais!
-        </p>
+    <p class="subtitle">
+        Música, Informação e Muito Mais!
+    </p>
 
-        <div class="player">
+    <div class="player-box">
 
-            <div
-                data-type="newStreamPlayer"
-                data-publicToken="e9c78308-9d30-4c94-8bd6-185e3fa14f1f"
-                data-theme="light"
-                data-color="e81e4d"
-                data-channelId="a2cda98a-3830-4240-8a16-a474017567bd"
-                data-rendered="false"
-                class="cstrEmbed">
+        <div
+            data-type="newStreamPlayer"
+            data-publicToken="e9c78308-9d30-4c94-8bd6-185e3fa14f1f"
+            data-theme="light"
+            data-color="e81e4d"
+            data-channelId="a2cda98a-3830-4240-8a16-a474017567bd"
+            data-rendered="false"
+            class="cstrEmbed">
 
-                <a href="https://www.caster.fm">Shoutcast Hosting</a>
-                <a href="https://www.caster.fm">Stream Hosting</a>
-                <a href="https://www.caster.fm">Radio Server Hosting</a>
-
-            </div>
+            <a href="https://www.caster.fm">Shoutcast Hosting</a>
+            <a href="https://www.caster.fm">Stream Hosting</a>
+            <a href="https://www.caster.fm">Radio Server Hosting</a>
 
         </div>
 
-        <div class="status">
-            🔴 PC Rádio FM — ao vivo
-        </div>
+    </div>
 
-        <div class="footer">
-            Obrigado por ouvir a PC Rádio FM ❤️
-        </div>
+    <div class="now-playing">
+        📻 PC Rádio FM <span>• AO VIVO</span>
+    </div>
 
-    </main>
+    <p class="description">
+        Aperte o PLAY e venha ouvir nossa programação!
+    </p>
 
-    <script src="//cdn.cloud.caster.fm//widgets/embed.js"></script>
+    <div class="line"></div>
+
+    <div class="footer">
+        Obrigado por ouvir a PC Rádio FM ❤️<br>
+        Música, informação e companhia para você.
+    </div>
+
+</main>
+
+<script src="//cdn.cloud.caster.fm//widgets/embed.js"></script>
 
 </body>
 </html>
+    

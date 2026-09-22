@@ -1,5 +1,4 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -17,64 +16,52 @@
 body {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    background:
-        radial-gradient(circle at top, #4a1024 0%, #180611 35%, #050505 75%);
+    background: linear-gradient(135deg, #080808, #250713, #080808);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 25px 15px;
+    padding: 20px;
 }
 
-/* CARTÃO PRINCIPAL */
 .radio-box {
     width: 100%;
-    max-width: 700px;
-    background: rgba(13, 13, 16, 0.97);
-    border: 1px solid rgba(232, 30, 77, 0.55);
-    border-radius: 30px;
-    padding: 32px 25px 30px;
+    max-width: 650px;
+    background: rgba(20, 20, 20, 0.97);
+    border: 1px solid #e81e4d;
+    border-radius: 25px;
+    padding: 35px 22px 28px;
     text-align: center;
-    box-shadow:
-        0 25px 70px rgba(0,0,0,0.8),
-        0 0 45px rgba(232,30,77,0.12);
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.65);
 }
 
-/* LOGO */
+/* LOGO DA RÁDIO */
 .logo {
-    width: 155px;
-    height: 155px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #e81e4d;
-    display: block;
+    border: 4px solid #e81e4d;
     margin: 0 auto 20px;
-    box-shadow:
-        0 0 0 7px rgba(232,30,77,0.08),
-        0 0 35px rgba(232,30,77,0.45);
+    display: block;
+    box-shadow: 0 0 25px rgba(232, 30, 77, 0.45);
 }
 
-/* AO VIVO */
 .live {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(232,30,77,0.12);
-    border: 1px solid rgba(232,30,77,0.5);
-    color: #ff5579;
+    display: inline-block;
+    background: #e81e4d;
+    color: white;
     font-size: 13px;
     font-weight: bold;
-    padding: 8px 17px;
+    padding: 8px 18px;
     border-radius: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
-/* NOME */
 h1 {
-    font-size: 46px;
-    font-weight: 800;
+    font-size: 42px;
+    margin-bottom: 8px;
     letter-spacing: 1px;
-    margin-bottom: 6px;
 }
 
 h1 span {
@@ -82,116 +69,80 @@ h1 span {
 }
 
 .subtitle {
-    color: #aaa;
-    font-size: 16px;
-    margin-bottom: 25px;
-}
-
-/* ÁREA DO PLAYER */
-.player-title {
-    color: #777;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    color: #d0d0d0;
+    font-size: 17px;
+    margin-bottom: 28px;
 }
 
 .player-box {
-    background: linear-gradient(145deg, #ffffff, #eeeeee);
-    border-radius: 20px;
-    padding: 20px 15px;
-    min-height: 120px;
+    background: white;
+    border-radius: 18px;
+    padding: 18px;
+    min-height: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.08);
 }
 
 .cstrEmbed {
     width: 100%;
 }
 
-/* TOCANDO AGORA */
 .now-playing {
     margin-top: 24px;
-    background: #17171b;
-    border: 1px solid #29292e;
-    border-radius: 16px;
-    padding: 16px;
-}
-
-.now-title {
-    color: #777;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 6px;
-}
-
-.now-name {
     font-size: 18px;
     font-weight: bold;
 }
 
-.now-name span {
+.now-playing span {
     color: #e81e4d;
 }
 
-/* MENSAGEM */
 .description {
-    margin-top: 20px;
-    color: #999;
+    margin-top: 10px;
+    color: #aaa;
     font-size: 14px;
 }
 
-/* LINHA */
 .line {
-    width: 80px;
+    width: 70px;
     height: 3px;
     background: #e81e4d;
     margin: 25px auto 18px;
-    border-radius: 10px;
-    box-shadow: 0 0 12px rgba(232,30,77,0.5);
+    border-radius: 5px;
 }
 
-/* RODAPÉ */
 .footer {
-    color: #666;
+    color: #888;
     font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
-.footer strong {
-    color: #999;
-}
-
-/* CELULAR */
 @media (max-width: 480px) {
 
     body {
-        padding: 12px 8px;
+        padding: 12px;
     }
 
     .radio-box {
-        padding: 25px 14px 24px;
-        border-radius: 24px;
+        padding: 28px 14px 22px;
     }
 
     .logo {
-        width: 125px;
-        height: 125px;
+        width: 120px;
+        height: 120px;
     }
 
     h1 {
-        font-size: 36px;
+        font-size: 34px;
     }
 
     .subtitle {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .player-box {
-        padding: 12px 8px;
+        padding: 12px;
     }
 }
 </style>
@@ -201,19 +152,16 @@ h1 span {
 
 <main class="radio-box">
 
-    <!-- LOGO DA RÁDIO -->
     <img
         src="f7c397f4-6ba6-4932-b2c7-2b6a61c99599.jpg"
         alt="PC Rádio FM"
         class="logo"
     >
 
-    <!-- STATUS -->
     <div class="live">
         🔴 AO VIVO
     </div>
 
-    <!-- NOME DA RÁDIO -->
     <h1>
         PC Rádio <span>FM</span>
     </h1>
@@ -222,15 +170,43 @@ h1 span {
         Música, Informação e Muito Mais!
     </p>
 
-    <!-- PLAYER -->
-    <div class="player-title">
-        🎧 Ouça agora
-    </div>
-
     <div class="player-box">
 
-        <!-- CASTER.FM - NÃO ALTERAR -->
         <div
             data-type="newStreamPlayer"
             data-publicToken="e9c78308-9d30-4c94-8bd6-185e3fa14f1f"
             data-theme="light"
+            data-color="e81e4d"
+            data-channelId="a2cda98a-3830-4240-8a16-a474017567bd"
+            data-rendered="false"
+            class="cstrEmbed">
+
+            <a href="https://www.caster.fm">Shoutcast Hosting</a>
+            <a href="https://www.caster.fm">Stream Hosting</a>
+            <a href="https://www.caster.fm">Radio Server Hosting</a>
+
+        </div>
+
+    </div>
+
+    <div class="now-playing">
+        📻 PC Rádio FM <span>• AO VIVO</span>
+    </div>
+
+    <p class="description">
+        Aperte o PLAY e venha ouvir nossa programação!
+    </p>
+
+    <div class="line"></div>
+
+    <div class="footer">
+        Obrigado por ouvir a PC Rádio FM ❤️<br>
+        Música, informação e companhia para você.
+    </div>
+
+</main>
+
+<script src="//cdn.cloud.caster.fm//widgets/embed.js"></script>
+
+</body>
+</html>
